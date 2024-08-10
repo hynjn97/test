@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test page</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            /* display: block; */
+        }
+        section {
+            position: relative;
+            margin-bottom: 3rem ;
+            padding-bottom: 4rem ;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>page test</h1>
+    </header>
+    
+    <nav>
+        <a href="#home">home</a>
+        <a href="#score">score</a>
+        <a href="#contest">contest</a>
+        <a href="#option1">option1</a>
+    </nav>
+
+    
+    <div class="container">
+
+        <section id="home">
+            <h2>content1</h2>
+            <p class="tabbed-paragraph">content1 description</p>
+            <div class="section-buttons">
+                <button onclick="document.getElementById('about').scrollIntoView()">c1</button>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>content2</h2>
+            <p>content2 description</p>
+            <div class="section-buttons">
+                <button onclick="document.getElementById('services').scrollIntoView()">\t\tcontent2 button</button>
+            </div>
+        </section>
+
+        <section id="contest">
+            <h2>content3</h2>
+            <p>content3 description</p>
+            <div class="section-buttons">
+                <button onclick="document.getElementById('contact').scrollIntoView()">content3 button</button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>content4</h2>
+            <p>content4 description</p>
+            <div class="section-buttons">
+                <button onclick="document.getElementById('home').scrollIntoView()">content4 button</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 240810</p>
+    </footer>
+    
+</body>
+</html>

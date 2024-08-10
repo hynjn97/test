@@ -1,0 +1,23 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "server test",
+  "main": "sev.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hynjn97/240810.git"
+  },
+  "author": "hjjung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hynjn97/240810/issues"
+  },
+  "homepage": "https://github.com/hynjn97/240810#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "xlsx": "^0.18.5"
+  }
+}
