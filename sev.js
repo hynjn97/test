@@ -11,8 +11,6 @@ app.listen( port , function(){
     console.log( 'listening on ' + port )
 })
 
-app.use(express.static( path.join( __dirname , '/test/data.xlsx' ) ) )
-
 app.get( '' , function( req , res ){ // main page
     res.sendFile( __dirname + '/index.html' )
 } )
@@ -21,14 +19,11 @@ app.get('/score', (req, res) => {
     res.sendFile(path.join(__dirname, 'score.html'))
 })
 
-app.get('/data', ( req , res ) => {
+app.get('/data/:file', (req, res) => {
+    const fileName = req.params.file;
+    const filePath = path.join(__dirname, 'public', fileName);
 
-    const filePath = path.join(__dirname, '/data.xlsx');
-    
-    if (!fs.existsSync(filePath)) {
-        return res.status(404).json({ error: '파일을 찾을 수 없습니다.' });
-    }
-
+    // 엑셀 파일 읽기
     const workbook = XLSX.readFile(filePath);
     const sheetName = workbook.SheetNames[0];
     const worksheet = workbook.Sheets[sheetName];
