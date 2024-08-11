@@ -16,7 +16,7 @@ app.get( '' , function( req , res ){ // main page
 } )
 
 app.get('/score', (req, res) => {
-    res.sendFile(path.join(__dirname, 'score.html'))
+    res.sendFile(path.join(__dirname, '/test/score.html')) // score.html 만 하면 안됨
 })
 
 app.get('/data/:file', (req, res) => {
@@ -33,5 +33,5 @@ app.get('/data/:file', (req, res) => {
 });
 
 app.get( '/calendar' , function( req , res ){
-    res.sendFile( __dirname + '/calendar.html' )
+    res.sendFile( __dirname + '/test/calendar.html' ) // calendar.html 만 하면 안됨
 } )
