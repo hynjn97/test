@@ -83,7 +83,7 @@
     <script>
         // 데이터 가져오기 및 표시 함수
         function fetchData(fileName, displayId) {
-            fetch(`/blob/main/public/${fileName}`)
+            fetch(`/public/${fileName}`)
                 .then(response => response.json())
                 .then(data => {
                     displayData(data, displayId);
