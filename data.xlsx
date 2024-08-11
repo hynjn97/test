@@ -1,3 +1,5 @@
-id	name	age
-1	28	user1
-2	30	user2
+rank	name	score
+1	user1	10
+2	user2	8
+2	user3	8
+4	user4	7
