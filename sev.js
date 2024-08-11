@@ -16,12 +16,12 @@ app.get( '' , function( req , res ){ // main page
 } )
 
 app.get('/score', (req, res) => {
-    res.sendFile(path.join(__dirname, '/test/score.html')) // score.html 만 하면 안됨
+    res.sendFile(path.join(__dirname, '/score.html'))
 })
 
 app.get('/data/:file', (req, res) => {
     const fileName = req.params.file;
-    const filePath = path.join(__dirname, '/test/public', fileName); // /public : 데이터 불러오기 실패함 
+    const filePath = path.join(__dirname, '/public', fileName); 
 
     // 엑셀 파일 읽기
     const workbook = XLSX.readFile(filePath);
@@ -33,5 +33,5 @@ app.get('/data/:file', (req, res) => {
 });
 
 app.get( '/calendar' , function( req , res ){
-    res.sendFile( __dirname + '/test/calendar.html' ) // calendar.html 만 하면 안됨
+    res.sendFile( __dirname + '/calendar.html' )
 } )
