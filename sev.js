@@ -11,7 +11,7 @@ app.listen( port , function(){
     console.log( 'listening on ' + port )
 })
 
-app.use(express.static( path.join( __dirname , 'data.xlsx' ) ) )
+app.use(express.static( path.join( __dirname , '/test/data.xlsx' ) ) )
 
 app.get( '' , function( req , res ){ // main page
     res.sendFile( __dirname + '/index.html' )
