@@ -21,7 +21,7 @@ app.get('/score', (req, res) => {
 
 app.get('/data/:file', (req, res) => {
     const fileName = req.params.file;
-    const filePath = path.join(__dirname, '/test/public', fileName); 
+    const filePath = path.join(__dirname, '/public', fileName); 
 
     // 엑셀 파일 읽기
     const workbook = XLSX.readFile(filePath);
