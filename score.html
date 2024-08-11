@@ -83,7 +83,7 @@
     <script>
         // 데이터 가져오기 및 표시 함수
         function fetchData(fileName, displayId) {
-            fetch(`/data/${fileName}`)
+            fetch(`/blob/main/public/${fileName}`)
                 .then(response => response.json())
                 .then(data => {
                     displayData(data, displayId);
@@ -134,8 +134,8 @@
 
         // 페이지 로딩 시 데이터 가져오기
         window.onload = () => {
-            fetchData('/blob/main/public/week.xlsx', 'weekDataDisplay');
-            fetchData('/blob/main/public/month.xlsx', 'monthDataDisplay');
+            fetchData('week.xlsx', 'weekDataDisplay');
+            fetchData('month.xlsx', 'monthDataDisplay');
         };
     </script>
 </body>
