@@ -112,11 +112,11 @@
             </div>
         </div>
 
-        <div class = "content">
-            <h2>content3</h2>
-            <p>content3 description</p>
+        <div class = "calendar" , id="calendarView">
+            <h2>calendar</h2>
+            <p>view calendar</p>
             <div class="section-buttons">
-                <button onclick="document.getElementById('contact').scrollIntoView()">content3 button</button>
+                <button onclick="document.getElementById('contact').scrollIntoView()">view calendar</button>
             </div>
         </div>
 
@@ -142,6 +142,10 @@
         function navigateToPage() {
             window.location.href = "https://www.headsupregi.com/headsupregi/php/main.php";
         }
+
+        document.getElementById('calendarView').addEventListener('click', () => {
+            window.location.href = '/calendar';
+        });
     </script>
 
 </body>
