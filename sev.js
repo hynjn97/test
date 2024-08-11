@@ -23,7 +23,7 @@ app.get('/score', (req, res) => {
 
 app.get('/data', ( req , res ) => {
 
-    const filePath = path.join(__dirname, 'data.xlsx');
+    const filePath = path.join(__dirname, 'test\data.xlsx');
     
     if (!fs.existsSync(filePath)) {
         return res.status(404).json({ error: '파일을 찾을 수 없습니다.' });
